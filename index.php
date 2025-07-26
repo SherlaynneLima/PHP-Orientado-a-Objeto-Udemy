@@ -1,11 +1,18 @@
 <?php
 
 require "classes/Pessoa.php";
+require "classes/Upload.php";
 require "classes/UploadFoto.php";
+require "classes/UploadFile.php";
 require "classes/AtividadesPessoa.php";
 
-$upload = new UploadFoto;
+$upload = new UploadFile('arquivo.zip');
+
+//echo $upload->teste();
+
+/*
 $upload->file('foto.png');
+*/
 $upload->extension();
 $upload->rename();
 echo $upload->upload();
